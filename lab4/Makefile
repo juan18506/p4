@@ -1,0 +1,21 @@
+.PHONY: all clean
+
+CC := g++
+CFLAGS := -Wall
+TARGET := main
+
+# $(wildcard *.cpp /xxx/xxx/*.cpp): get all .cpp files from the current directory and dir "/xxx/xxx/"
+SRCS := $(wildcard *.cpp)
+# $(patsubst %.cpp,%.o,$(SRCS)): substitute all ".cpp" file name strings to ".o" file name strings
+OBJS := $(patsubst %.cpp,%.o,$(SRCS))
+
+all: $(OBJS)
+	$(MAKE) -C implementations
+	$(CC) $(CFLAGS) -lstdc++ implementations/implementations.o main.o -o main
+#$(TARGET): $(OBJS)
+#	$(CC) -o $@ $^
+%.o: %.cpp
+	$(CC) $(CFLAGS) -c $<
+clean:
+	rm -rf $(TARGET) *.o
+	$(MAKE) -C implementations clean

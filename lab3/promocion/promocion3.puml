@@ -1,0 +1,127 @@
+@startuml
+
+!pragma ratio 0.3
+
+'scale 20
+'skinparam nodesep 10
+'skinparam ranksep 20
+'skinparam padding 100
+
+skinparam componentStyle rectangle
+skinparam linetype ortho
+'skinparam linetype polyline
+
+card "\n\n <u>:ControladorPromocion</u> \n\n" as ControladorPromocion
+note top of ControladorPromocion: 8*: Si no tiene promocion vigente, genera el datavalue (de tipo DTProductoLinea) correspondiente al producto y lo agrega a sinpromo, y retorna sinpromo al terminar.
+
+'together {
+card "\n\n ControladorSistema \n\n" as ControladorSistema
+
+card "\n\n <u>cs: ControladorSistema</u> \n\n" as cs
+'}
+
+'together {
+
+card "\n\n ManejadorVendedor \n\n" as ManejadorVendedor
+
+card "\n\n <u>mv: ManejadorVendedor</u> \n\n" as mv
+'}
+
+'together {
+collections "\n\n <u>vendedores: Vendedor</u> \n\n" as vendedores
+
+card "\n\n <u>v: Vendedor</u> \n\n" as v
+'}
+
+'together {
+collections "\n\n <u>productos: Producto</u> \n\n" as productos
+
+collections "\n\n <u>pds: Producto</u> \n\n" as pds
+'}
+
+'together {
+card "\n\n                        <u>pd: Producto</u>                        \n\n" as pd
+note right of pd: 7*.2: Si la promo vigente ya no es vigente,\n    la asociacion promovigente se elimina (queda vacia).\n8*: tienePromocionVigente() es verdadero si la asociacion promovigente existe,\n    de lo contrario es falso
+
+card "\n\n <u>promovigente: PromocionProducto</u> \n\n" as vigente
+
+card "\n\n <u>promocion: Promocion</u> \n\n" as pm
+
+collections "\n\n <u>promosnovigentes: PromocionProducto</u> \n\n" as novigentes
+
+actor Administrador
+'}
+
+
+'card "\n\n ManejadorPromocion \n\n" as ManejadorPromocion
+
+'card "\n\n <u>mpm: ManejadorPromocion</u> \n\n" as mpm
+
+'collections "\n\n <u>promociones: Promocion</u> \n\n" as promociones
+
+'collections "\n\n <u>pms: Promocion</u> \n\n" as pms
+
+'card "\n\n <u>pm: Promocion</u> \n\n" as pm
+
+'collections "\n\n <u>pmvs: Promocion</u> \n\n" as pmvs
+
+
+' Arrows: ← ↑ → ↓
+
+Administrador -- ControladorPromocion : ↓ sinpromo := obtenerProductosSinPromoVigenteVendedor(nickname: string): Set(DTProductoLinea)
+
+ControladorPromocion -- "<<global>>" ControladorSistema : ↓ 1. cs := getInstance(): ControladorSistema
+
+ControladorPromocion -- "<<local>>" cs : ↓ 2. fecha := getFecha(): DTFecha
+
+ControladorPromocion -- "<<global>>" ManejadorVendedor : ↓ 3. mv := getInstance(): ManejadorVendedor
+
+ControladorPromocion -- "<<local>>" mv : ↓ 4. v := obtenerVendedor(nickname: string): Vendedor
+
+'ControladorPromocion -- ManejadorProducto : mpd := getInstance(): ManejadorProducto
+
+mv -- "<association>" vendedores : ↓ 4.1. v := find(nickname): Vendedor\n
+
+ControladorPromocion -- "<<local>>" v : ↓ 5. pds := obtenerProductos(): set(Producto)
+
+v -- "5.1*. [foreach] pd := next(): Producto ↓\n<<association>>" productos
+
+v -- "\n\n<<local>>" pds : 5.2*. add(pd: Producto) ↓
+
+ControladorPromocion -- "<<local>>" pds : ↓ 6*. [foreach] pd := next(): Producto
+
+ControladorPromocion -- "<<local>>" pd : ↓ 7*. actualizarVigenciaPromocion(fecha: DTFecha)\n8*. vg := tienePromocionVigente(): boolean
+' ↓
+
+pd -- "<<association>>" vigente : ↓ 7*.1. [ if promovigente != NULL ]\nfin := getFin(): DTFecha
+
+vigente -- "<<association>>" pm : ↓ 7*.1.1. fin := getFin(): DTFecha
+
+pd -- "\n\n<<association>>" novigentes : ↓ 7*.2. [ if promovigente != NULL && fecha.esPosterior(fin) ] add(promovigente: PromocionProducto)
+
+'ControladorPromocion -- "<<local>>" pd : ↓
+'ControladorPromocion -- ManejadorPromocion : → mpm := getInstance(): ManejadorPromocion
+
+'ControladorPromocion -- mpm : pms := obtenerPromociones(): set(Promocion)
+
+'mpm -- promociones : [foreach] pm := next()
+
+'mpm -- pms : add(pm)
+
+'ControladorPromocion -- pms : [foreach] pm := next()
+
+'ControladorPromocion -- pm : fin := obtenerFin()
+
+'ControladorPromocion -- pmvs : [fin >= fecha] add(pm)
+
+
+
+'v -- productos : [foreach] pd := next()
+
+'v -- pds : add(pd)
+
+'ControladorPromocion -- pds : [foreach] pd := next()
+
+'ControladorPromocion -- pmvs : asoc := estaAsociado(pd): boolean
+
+@enduml

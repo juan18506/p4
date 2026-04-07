@@ -1,0 +1,224 @@
+<mxfile host="app.diagrams.net" modified="2024-06-01T08:32:09.721Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="yf4RqNvgS-wjVnCrogFi" version="24.4.13" type="device">
+  <diagram name="Página-1" id="nu0EVNhr1OtlcruEK6dV">
+    <mxGraphModel dx="1257" dy="669" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="hV74Z-ZVharI-37wIdaY-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="hV74Z-ZVharI-37wIdaY-6" target="hV74Z-ZVharI-37wIdaY-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="1" source="hV74Z-ZVharI-37wIdaY-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="118" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="hV74Z-ZVharI-37wIdaY-6" target="hV74Z-ZVharI-37wIdaY-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="hV74Z-ZVharI-37wIdaY-6" target="hV74Z-ZVharI-37wIdaY-49" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.125;exitY=1.021;exitDx=0;exitDy=0;exitPerimeter=0;endArrow=none;endFill=0;" parent="1" source="hV74Z-ZVharI-37wIdaY-6" target="hV74Z-ZVharI-37wIdaY-11" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="314" y="220" />
+              <mxPoint x="250" y="220" />
+              <mxPoint x="250" y="362" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-6" value="&lt;u&gt;ControladorNotificacion&lt;/u&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="298" y="140" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-7" value="ManejadorVendedores" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="303" y="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="hV74Z-ZVharI-37wIdaY-9" target="hV74Z-ZVharI-37wIdaY-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-9" value="&lt;u&gt;mv:ManejadorVendedores&lt;/u&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="522" y="140" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;" parent="1" source="hV74Z-ZVharI-37wIdaY-11" target="hV74Z-ZVharI-37wIdaY-19" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-11" value="&lt;u&gt;v:Vendedor&lt;/u&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="375" y="332" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-12" value="" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="793" y="125" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-13" value="&lt;u&gt;Vendedores&lt;/u&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="788" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-14" value="1:mv:=getInstancia()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="220" y="80" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-15" value="2:sv:=getVendedores():set(Vendedor)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="390" y="110" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-16" value="2.1*[foreach]:Ven:=next()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="643" y="120" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-17" value="" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="620" y="317" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;dashed=1;" parent="1" source="hV74Z-ZVharI-37wIdaY-19" target="hV74Z-ZVharI-37wIdaY-25" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-19" value="Cliente" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="610" y="332" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;endArrow=none;endFill=0;dashed=1;" parent="1" source="hV74Z-ZVharI-37wIdaY-21" target="hV74Z-ZVharI-37wIdaY-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="260" />
+              <mxPoint x="220" y="185" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-21" value="Se retorna un set(DTVendedor)&lt;div&gt;con los DTVendedor que retorna getVendedor&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="220" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;endArrow=none;endFill=0;dashed=1;" parent="1" source="hV74Z-ZVharI-37wIdaY-23" target="hV74Z-ZVharI-37wIdaY-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="110" />
+              <mxPoint x="230" y="110" />
+              <mxPoint x="331" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-23" value="se mantiene una referencia nickname ingresado&amp;nbsp;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="99" y="65" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-24" value="ListarSuscripciones(nickname):set(DTVendedor)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry y="140" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-25" value="Colección de los clientes suscriptos al vendedor" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="610" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-26" value="3*.1 :estar:=Suscripto(nickname):bool" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="253" y="280" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-27" value="3*.1.1:esta=exist(nickname)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="475" y="392" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-28" value="3*2:[estar]:getVendedor():DTVendedor" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="253" y="304" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="hV74Z-ZVharI-37wIdaY-38" target="hV74Z-ZVharI-37wIdaY-11" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="355" y="377" />
+              <mxPoint x="355" y="424" />
+              <mxPoint x="465" y="424" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-30" value="3*.2.1:ni:=getNickame:string" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="350" y="422" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-31" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="440" y="150" as="sourcePoint" />
+            <mxPoint x="490" y="150" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-32" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="700" y="150" as="sourcePoint" />
+            <mxPoint x="750" y="150" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-33" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="530" y="391" as="sourcePoint" />
+            <mxPoint x="580" y="391" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-34" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="260" y="287" as="sourcePoint" />
+            <mxPoint x="260" y="317" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;dashed=1;" parent="1" source="hV74Z-ZVharI-37wIdaY-36" target="hV74Z-ZVharI-37wIdaY-38" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="461" />
+              <mxPoint x="340" y="383" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-36" value="Se crea un DTVendedor con nickname(ni), nacimiento(na) y rut(ru)" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="200" y="410" width="92" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="hV74Z-ZVharI-37wIdaY-11" target="hV74Z-ZVharI-37wIdaY-38" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="375" y="377" as="sourcePoint" />
+            <mxPoint x="465" y="392" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-38" value="" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="367" y="374" width="8" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-39" value="3*.2.2:na:=getNacimiento():string" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="345" y="444" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-40" value="3*.2.3:ru:=getRut():string" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="345" y="464" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-41" value="&amp;lt;&amp;lt;Global&amp;gt;&amp;gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="360" y="80" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-42" value="&amp;lt;&amp;lt;Local&amp;gt;&amp;gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="450" y="165" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-43" value="&amp;lt;&amp;lt;Local&amp;gt;&amp;gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="303" y="334" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-44" value="&amp;lt;&amp;lt;Association&amp;gt;&amp;gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="510" y="334" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-45" value="&amp;lt;&amp;lt;Association&amp;gt;&amp;gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="690" y="165" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;dashed=1;endArrow=none;endFill=0;" parent="1" source="hV74Z-ZVharI-37wIdaY-47" target="hV74Z-ZVharI-37wIdaY-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-47" value="Retorna un set(vendedor) compuesto por los vendedores que devuelve ¨Ven¨" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="574" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-48" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="350" y="125" as="sourcePoint" />
+            <mxPoint x="350" y="95" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-49" value="sv:set(vendedor)" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="468" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-50" value="3*[foreach]:v:=next()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="310" y="220" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-51" value="&amp;lt;&amp;lt;Local&amp;gt;&amp;gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="450" y="210" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hV74Z-ZVharI-37wIdaY-52" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="434.38" y="220" as="sourcePoint" />
+            <mxPoint x="434.38" y="250" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

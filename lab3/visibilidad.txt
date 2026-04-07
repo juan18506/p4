@@ -1,0 +1,13 @@
+Global Cliente
+Global Vendedor
+Vendedor -> Producto
+Vendedor -> Promocion
+Cliente -> Compra
+Producto -> Comentario
+Cliente -> Comentario
+Vendedor -> Comentario
+Cliente -> Notificacion
+Promocion -> Notificaction
+Promocion -> Producto
+Comentario -> Comentario (padre ve a hijos)
+Producto -> Compra

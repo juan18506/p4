@@ -1,0 +1,14 @@
+@startuml
+
+skinparam componentStyle rectangle
+skinparam linetype ortho
+'skinparam linetype polyline
+
+card "\n\n <u>:ControladorPromocion</u> \n\n" as ControladorPromocion
+note bottom of ControladorPromocion: Se guarda en memoria el nombre, descripcion, descuento y fin.
+
+actor Administrador
+
+Administrador -- ControladorPromocion : ↓ iniciarCrearPromocion(nombre: string, descripcion: string, descuento: float, fin: DTFecha)
+
+@enduml

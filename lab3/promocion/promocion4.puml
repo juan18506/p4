@@ -1,0 +1,14 @@
+@startuml
+
+skinparam componentStyle rectangle
+
+card "\n\n <u>:ControladorPromocion</u> \n\n" as ControladorPromocion
+note bottom of ControladorPromocion: Se guarda en memoria el codigo y minimo dado.
+
+actor Administrador
+
+' Arrows: ← ↑ → ↓
+
+Administrador -- ControladorPromocion : \n ↓ seleccionarProductoPromocion(codigo: int, minimo: int)
+
+@enduml

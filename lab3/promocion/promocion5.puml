@@ -1,0 +1,155 @@
+@startuml
+
+!pragma ratio 0.15
+
+'scale 20
+'skinparam nodesep 10
+'skinparam ranksep 20
+'skinparam padding 100
+
+skinparam componentStyle rectangle
+skinparam linetype ortho
+'skinparam linetype polyline
+
+
+card "\n\n <u>:ControladorPromocion</u> \n\n" as ControladorPromocion
+note top of ControladorPromocion: Se tiene en memoria pares de codigo y minimo
+
+card "\n\n <u>pm: Promocion</u> \n\n" as pm
+
+collections "\n\n <u>productos: PromocionProducto</u> \n\n" as pproductos
+
+card "\n\n ManejadorPromocion \n\n" as ManejadorPromocion
+
+card "\n\n <u>mpm: ManejadorPromocion</u> \n\n" as mpm
+
+collections "\n\n <u>promociones: Promocion</u> \n\n" as promociones
+
+card "\n\n ManejadorVendedor \n\n" as ManejadorVendedor
+
+card "\n\n <u>mv: ManejadorVendedor</u> \n\n" as mv
+
+collections "\n\n <u>vendedores: Vendedor</u> \n\n" as vendedores
+
+card "\n\n <u>v: Vendedor</u> \n\n" as v
+
+collections "\n\n <u>promociones: Promocion</u> \n\n" as vpromociones
+
+card "\n\n ManejadorProducto \n\n" as ManejadorProducto
+
+card "\n\n <u>mpd: ManejadorProducto</u> \n\n" as mpd
+
+collections "\n\n <u>productos: Producto</u> \n\n" as productos
+
+card "\n\n <u>pmpd: PromocionProducto</u> \n\n" as pmpd
+note bottom of pmpd: Se mantiene una referencia desde la instancia pmpd de tipo PromocionProducto\na la instancia pd de tipo Producto\nSe mantiene una referencia desde la instancia pmpd de tipo PromocionProducto\na la instancia pm de tipo Promocion
+
+card "\n\n <u>pd: Producto</u> \n\n" as pd
+note bottom of pd: Se mantiene una referencia desde la instancia pd de tipo Producto\na la instancia pmpd de tipo PromocionProducto\n(como promocion vigente)
+
+actor Administrador
+
+	'card "\n\n <u>pm: Promocion</u> \n\n" as pm1
+	'note top of pm1: Nombre, Descuento, Descripcion y Fin están guardados en memoria del controlador
+
+	'collections "\n\n dtprods: DTProducto \n\n" as dtprods
+	'note bottom of dtprods: dtprods está guardado en memoria del controlador
+
+	'card "\n\n ControladorProducto< \n\n" as ControladorProducto
+	'card "\n\n <u>cp: ControladorProducto</u> \n\n" as cp
+	'card "\n\n ManejadorVendedor \n\n" as ManejadorVendedor2
+	'card "\n\n <u>mv2: ManejadorVendedor</u> \n\n" as mv2
+	'collections "\n\n <u>vendedores2: Vendedor</u> \n\n" as vendedores2
+	'card "\n\n <u>v2: Vendedor</u> \n\n" as v2
+
+
+	'card "\n\n <u>mpm: ManejadorPromocion</u> \n\n" as mpm
+	'card "\n\n Promocion \n\n" as Promocion
+
+
+
+	'card "\n\n ControladorUsuario \n\n" as ControladorUsuario
+	'card "\n\n cu: ControladorUsuario \n\n" as cu
+
+
+' Arrows: ← ↑ → ↓
+
+Administrador -- ControladorPromocion : ↓ \n terminarCrearPromocion()
+
+ControladorPromocion -- "<<local>>" pm : ← \n 1: pm := create(Nombre: string, Descuento: float, Descripcion: string, Fin: DTFecha)\n 13*. asociarProducto(pmpd: PromocionProducto)
+
+pm -- "<<association>>" pproductos : ↓ 13*.1 add(pmpd: PromocionProducto)
+
+ControladorPromocion -- "<<global>>" ManejadorPromocion : ↓ 2: mpm := getInstance(): ManejadorPromocion
+
+ControladorPromocion -- "<<local>>" mpm : ↓ \n 3: agregarPromocion(pm: Promocion)
+
+mpm -- "<<association>>" promociones : \n ↓ 3.1: add(pm: Promocion)
+
+ControladorPromocion -- "<<global>>" ManejadorVendedor : ↓ 4. mv := getInstance(): ManejadorVendedor
+
+ControladorPromocion -- "<<local>>" mv : ↓ 5. v := obtenerVendedor(nickname: string): Vendedor
+
+mv -- "<<association>>" vendedores : ↓ 5.1. v := find(nickname: string): Vendedor
+
+ControladorPromocion -- "<<local>>" v : ↓ 6. asociarPromocion(pm: Promocion)
+
+v -- "<<association>>" vpromociones : ↓ 6.1. add(pm: Promocion)
+
+ControladorPromocion -- "<<global>>" ManejadorProducto : ↓ 7. mpd := getInstance(): ManejadorProducto
+
+ControladorPromocion -- "<<local>>" mpd : ↓ 8*. [foreach (codigo: int, minimo: int)] pd := obtenerProducto(codigo: int): Producto
+
+mpd -- "<<association>>" productos : ↓ 8*.1 pd := find(codigo: int): Producto
+
+ControladorPromocion -- "<<local>>" pmpd : ↓ 9*. create(minimo: int)\n10*. asociarProducto(pd: Producto)\n11*. asociarPromocion(pm: Promocion)
+
+'ControladorPromocion -- "<<local>>" pmpd : 12*.asociarProducto(pd: Producto)
+
+'ControladorPromocion -- "<<local>>" pmpd : 13*.asociarPromocion(pm: Promocion)
+
+ControladorPromocion -- "<<local>>" pd : ↓ 12*. asociarPromocion(pmpd: PromocionProducto)
+
+'ControladorPromocion -- "<<local>>" pm : asociarProducto(pmpd: PromocionProducto)
+
+
+''ControladorPromocion -- ControladorPromocion : 2: → \n prods := getProductosPromocion()
+'
+'' Asociar a vendedor
+''ControladorPromocion -- ControladorUsuario : ↓ 3: cu := getInstance()
+'
+''ControladorPromocion -- cu : → \n 4: asociarPromocionVendedor(pm)
+'
+'ControladorPromocion -- ManejadorVendedor1 : ←  \n 4.1: mv := getInstance()
+'
+'ControladorPromocion -- mv1: ↓ v1 := 4.2: find(nickname)
+'
+'mv1 -- vendedores1 : ↓ v := 4.2.1: find(nickname)
+'
+'ControladorPromocion -- v1 : →  \n 4.3: asociarPromocion(pm);
+'
+'' Asociar a productos
+'
+''ControladorPromocion -- ControladorProducto : → \n 5: cp := getInstance()
+'
+'ControladorPromocion -- dtprods : ← \n 6*:[foreach] dtprod := next()
+'
+''ControladorPromocion -- cp : → \n 6*.1: prod := obtenerProducto(dtprod.codigo)
+'
+'ControladorPromocion -- ManejadorProducto : ← \n 6*.1.1: mpd := getInstance()
+'
+'ControladorPromocion -- mpd : ↓ 6*.1.2: prod := find(codigo)
+'
+'mpd -- productos : ↓ 6*.1.2.1: prod := find(codigo)
+'
+'ControladorPromocion -- pm : ← \n 6*.2: asociarProducto(prod)
+'
+''cp -- ManejadorVendedor2 : mv2 := getInstance()
+'
+''cp -- mv2 : v := find(nickname)
+'
+''mv2 -- vendedores2 : → \n 5.1.1*: v2 := find(nickname)
+'
+''cp -- v2 : → \n 5.1.2*: prod := obtenerProducto(nombre)
+
+@enduml

@@ -1,0 +1,32 @@
+<mxfile host="app.diagrams.net" modified="2024-06-01T08:30:43.840Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="S6pftzwQvcMM-HjntWVQ" version="24.4.13" type="device">
+  <diagram name="Página-1" id="ZpHGOKFWNlwMcSiMiCm0">
+    <mxGraphModel dx="880" dy="468" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qKHG8B9U1WiaPZ7QzPJw-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="1" source="qKHG8B9U1WiaPZ7QzPJw-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="10" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qKHG8B9U1WiaPZ7QzPJw-1" value="&lt;u&gt;ControladorNotificacion&lt;/u&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="130" y="120" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qKHG8B9U1WiaPZ7QzPJw-5" value="LiberarUsuario()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="20" y="120" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zXvUmmn8BaFcIqcT_bpU-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;dashed=1;" parent="1" source="I5jy4h_aNkj4faBG9fUo-1" target="zXvUmmn8BaFcIqcT_bpU-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="110" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="I5jy4h_aNkj4faBG9fUo-1" value="Se libera la memoria asociada al nickname previamente ingresado" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zXvUmmn8BaFcIqcT_bpU-1" value="" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="145" width="10" height="10" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

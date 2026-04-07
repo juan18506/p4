@@ -1,0 +1,42 @@
+@startuml
+
+skinparam componentStyle rectangle
+'skinparam linetype ortho
+skinparam linetype polyline
+
+card "\n\n <u>:ControladorPromocion</u> \n\n" as ControladorPromocion
+note right of ControladorPromocion: 4*: Se guarda cada nick obtenido en un set(string) nicks y se retorna al terminar.
+
+card "\n\n ManejadorVendedor \n\n" as ManejadorVendedor
+
+card "\n\n <u>mv: ManejadorVendedor</u> \n\n" as mv
+
+collections "\n\n <u>vendedores: Vendedor</u> \n\n" as vendedores
+
+collections "\n\n <u>vs: Vendedor</u> \n\n" as vs
+
+card "\n\n <u>v: Vendedor</u> \n\n" as v
+
+':collections "\n\n <u>nicks: string</u> \n\n" as nicks
+
+actor Administrador
+
+' Arrows: ← ↑ → ↓
+
+Administrador -- ControladorPromocion : ↓ nicks := obtenerNicksVendedores(): set(string)
+
+ControladorPromocion -- "<<global>>" ManejadorVendedor : ↓ 1. mv := getInstance(): ManejadorVendedor
+
+ControladorPromocion -- "<<local>>" mv : ↓ 2. vs := obtenerVendedores(): set(Vendedor)
+
+mv -- "<<association>>" vendedores : ↓ 2.1*. [foreach] v := next(): Vendedor
+
+mv -- "<<local>>" vs : ↓ 2.2*. add(v: Vendedor)
+
+ControladorPromocion -- "<<local>>" vs : ↓ 3*. [foreach] v := next(): Vendedor
+
+ControladorPromocion -- "<<local>>" v : ↓ 4*. nick := getNickname(): string
+
+'ControladorPromocion -- nicks : ↓ 5* add(nick: string)
+
+@enduml

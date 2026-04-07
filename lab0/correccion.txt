@@ -1,0 +1,11 @@
+En líneas generales
+la tarea está bien aunque tiene solo un detalle, las siguientes operaciones
+la idea era que se realizaran directamente sobre los destructores de cada
+clase
+es decir que en esta parte
+deberían solo ejecutar borrarInformacionGlobal para que lo quitara de la
+colección global y luego al ejecutar el delete de información, esto
+provocaría que el destructor recorriera todos los estudiantes que tiene
+asociados y ejecute eliminarInformacion. Por lo anterior el destructor de
+información no debería ser =0 sino que tendría la recorrida de la lista de
+estudiantes y ejecutaría la operación de eliminarInformacion.

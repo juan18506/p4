@@ -1,0 +1,43 @@
+@startuml
+
+label l [
+
+{{
+
+mainframe sd: Crear promoción
+
+actor "Administrador"
+
+"Administrador" --> "__:Sistema__": iniciarCrearPromocion(nombre: string, descripcion: string, descuento: float, fin: DTFecha)
+note right: El sistema recuerda los datos de la promoción ingresados.
+
+"Administrador" --> "__:Sistema__": obtenerNicksVendedores(): Set(string)
+
+'"Administrador" --> "__:Sistema__": seleccionarVendedor(nickname: string)
+'note right: El sistema recuerda al vendedor
+
+'"Administrador" --> "__:Sistema__": obtenerProductosSinPromoVigenteVendedor(): Set(DTProducto)
+'"Administrador" --> "__:Sistema__": obtenerProductosSinPromoVigenteVendedor(nickname: string): Set(DTSelProd)
+"Administrador" --> "__:Sistema__": obtenerProductosSinPromoVigenteVendedor(nickname: string): Set(DTProductoLinea)
+note right: El sistema recuerda el nickname del vendedor.
+
+loop mientras quiera agregar más productos
+
+	"Administrador" --> "__:Sistema__": seleccionarProductoPromocion(codigo: int, minimo: int)
+	note right: El sistema recuerda el código de producto seleccionado y el mínimo especificado.
+
+end
+
+"Administrador" --> "__:Sistema__": terminarCrearPromocion()
+note right: El sistema libera la memoria de los datos de la promoción, del nickname del vendedor, y los códigos de productos seleccionados y sus mínimos.
+}}
+
+{{
+class DTProductoLinea <<datatype>> {
+	+getCodigo(): int
+	+getNombre(): string
+}
+}}
+
+]
+@enduml

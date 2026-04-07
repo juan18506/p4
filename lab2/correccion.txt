@@ -1,0 +1,34 @@
+   - El listado de usuarios debería ser una operación sola utilizando por
+   ejemplo que los 2 datatypes que tienen por separado hereden de un mismo
+   data type (ej. DTUsuario) ya que en si los usuarios deberían ser un solo
+   conjunto
+   - En consultar producto podrían juntar las dos últimas operaciones y
+   agregar en el datatype de retorno DTProducto el nickname del vendedor ya
+   que en sí son parte de la misma operación de obtener los datos del producto
+   y no una operació aparte
+   - En el consultar promoción el opt no sería necesario ya que en DSS
+   modelaríamos en este caso la opción de que el Administrador seleccionará la
+   opción de consultar los datos, y respecto a esto igual que en la anterior
+   la idea es obtener el resultado en la información
+   -  de retorno y no ejecutar varias operaciones para obtener esta
+   información
+   - Al igual que el anterior el Opt no es necesario, y al igual que en en
+   las otras operaciones la idea es que una operación retorna el dt compra con
+   toda la información y no varias operaciones para ver esa información
+   - En expediente de usuario el loop de compras en sí no es una opción del
+   usuario sino que es algo que el sistema de por sí debería saber y retornar
+   todas las compras al igual que la decisión de que si el actor
+   (Administrador) deba elegir que ejecutar ya que nuevamente la idea es que
+   el sistema solo devuelva los datos necesarios por lo que en este caso sería
+   algo similar al consular usuario de tener un DT que sea heredable y según
+   cual se el tipo de usuario retornaría el tipo que corresponda
+   - En el contrato de Terminar crear promoción al igual que en cualquier
+   contrato las pre condiciones no pueden hacer referencia a la ejecución de
+   operaciones sino que para esto se debería usar algo en memoria o estado del
+   sistema para saber si estas ejecutaron o no por ejemplo en este caso pueden
+   usar la memoria guardada en el incio o por las ejecuciones de las
+   operaciones de seleccionar producto.En esta operación en la frase "que
+   además está asociada a todas las instancias de Producto cuyo campo Codigo
+   coincida" debería indicar que se crean links y no simplemente decir que
+   están relacionados ya que entiendo refiere a la promoción y no al vendedor
+   producto

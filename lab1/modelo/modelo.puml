@@ -1,0 +1,86 @@
+@startuml
+
+class DtFecha <<datatype>> {
+	dia: int
+	mes: int
+	anio: int
+}
+
+class DtDireccion <<datatype>> {
+	calle: String
+	puerta: int
+}
+
+abstract class Usuario {
+	nickname: String
+	contrasenia: String
+	nacimiento: DtFecha
+}
+
+class Cliente {
+	direccion: DtDireccion
+	ciudad: String
+}
+
+class Vendedor {
+	rut: String
+}
+
+Usuario <|-- Cliente
+Usuario <|-- Vendedor
+
+class Producto {
+	codigo: String
+	stock: int
+	precio: float
+	nombre: String
+	descripcion: String
+	categoria: CategoriaProducto
+}
+
+Vendedor o-- Producto : vende
+
+enum CategoriaProducto <<enumeration>> {
+	Ropa
+	Electrodomesticos
+	Otros
+}
+
+class Promocion {
+	nombre: String
+	descripcion: String
+	vencimiento: DtFecha
+}
+
+class ProductoPromocion {
+	minimo: int
+}
+
+Producto "1" <-- "*" ProductoPromocion : producto
+
+Promocion *-- ProductoPromocion : productos
+
+class ProductoCompra {
+	cantidad: int
+}
+
+Producto <-- ProductoCompra : producto
+
+class Compra {
+	fecha: DtFecha
+	/monto: float
+}
+
+Compra *-- ProductoCompra : productos
+
+Cliente o-- Compra : compras
+
+class Comentario {
+	texto: String
+	fecha: DtFecha
+}
+
+Producto "1" <-- "*" Comentario : producto
+Comentario "1" <-- "*" Comentario : respuesta
+
+@enduml

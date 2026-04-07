@@ -1,0 +1,40 @@
+<mxfile host="app.diagrams.net" modified="2024-04-27T22:41:42.642Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0" etag="_lbTmiPP9ppU7dkRGZ_R" version="24.3.1" type="device">
+  <diagram name="Page-1" id="jepJS7BR6tuDKBN1iZcQ">
+    <mxGraphModel dx="1434" dy="1928" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="e7AIofUECc1USpYEMlIp-1" value="" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;" parent="1" vertex="1">
+          <mxGeometry x="190" y="60" width="20" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="e7AIofUECc1USpYEMlIp-2" value="&lt;u&gt;:Sistema&lt;/u&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="540" y="60" width="100" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="e7AIofUECc1USpYEMlIp-3" value="Administrador" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="150" y="100" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="e7AIofUECc1USpYEMlIp-4" value="&lt;div&gt;sd: Eliminar Comentario&lt;/div&gt;&lt;div&gt;Sin memoria&lt;br&gt;&lt;/div&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=160;" parent="1" vertex="1">
+          <mxGeometry y="-10" width="760" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="e7AIofUECc1USpYEMlIp-5" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;ListarNicknameUsuarios():Set(String)&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" parent="e7AIofUECc1USpYEMlIp-4" target="e7AIofUECc1USpYEMlIp-2" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="200" y="170" as="sourcePoint" />
+            <mxPoint x="280" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7AIofUECc1USpYEMlIp-23" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;ListarComentarios&lt;font style=&quot;font-size: 12px;&quot;&gt;(Nickname:String):Set(DTComentario)&lt;/font&gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" parent="e7AIofUECc1USpYEMlIp-4" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="200" y="200" as="sourcePoint" />
+            <mxPoint x="590" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7AIofUECc1USpYEMlIp-26" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;EliminarComentarioYDescendientes&lt;font style=&quot;font-size: 12px;&quot;&gt;(Comentario:DTComentario)&lt;/font&gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" parent="e7AIofUECc1USpYEMlIp-4" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="200" y="230" as="sourcePoint" />
+            <mxPoint x="590" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

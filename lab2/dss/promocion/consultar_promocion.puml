@@ -1,0 +1,43 @@
+@startuml
+
+label l [
+
+{{
+
+mainframe sd: Consultar promoción
+
+actor "Administrador"
+
+"Administrador" --> "__:Sistema__": obtenerPromocionesVigentes(): Set(DTPromocion)
+
+opt si quiere consultar la información 
+
+	"Administrador" --> "__:Sistema__": obtenerProductosPromocion(nombre: string): Set(DTProductoXPromocionProducto)
+
+	"Administrador" --> "__:Sistema__": obtenerVendedorPromocion(nombre: string): DTVendedor
+
+end
+
+}}
+
+{{
+
+class DTPromocion <<datatype>> {
+	+getDescuento(): float
+	+getNombre(): string
+	+getDescripcion(): string
+	+getFin(): DTFecha
+}
+
+class DTPromocionProducto <<datatype>> {
+	+getMinimo(): int
+}
+
+class DTProductoXPromocionProducto <<datatype>> {
+	+getProducto(): DTProducto
+	+getPromocionProducto(): DTPromocionProducto
+}
+
+}}
+]
+@enduml
